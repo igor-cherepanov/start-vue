@@ -1,30 +1,46 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <form class="d-flex mt-2" action="">
+      <div class="font-bold mx-4 my-2">Создание</div>
+      <input class="" type="text" placeholder="Название">
+      <input class="focus:outline" type="text" placeholder="Описание">
+      <button class="btn mx-4 text-center bg-purple-200 hover:shadow-purple-900 hover:outline hover:ring-2 ring-purple-400" >Создать</button>
+    </form>
+    <div class="post border-2 border-indigo-600 m-4 p-2 " v-for="post in posts">
+      <div><span class="font-bold">Название: </span>{{ post.title }}</div>
+      <div><span class="font-bold">Описание: </span>{{ post.body }}</div>
+    </div>
   </div>
-  <router-view/>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  data() {
+    return {
+      posts: [
+        {id: 1, title: 'Title 1', body: 'Body 1'},
+        {id: 2, title: 'Title 1', body: 'Body 1'},
+        {id: 3, title: 'Title 1', body: 'Body 1'},
+      ]
+    }
+  },
+  methods: {
+    addLike() {
+      this.likes += 1;
+    },
+    addDislike() {
+      this.dislikes -= 1;
+    }
+  }
 }
+</script>
 
-#nav {
-  padding: 30px;
+<style scoped lang="postcss">
+.btn {
+  padding: 5px 15px;
+  border-radius: 5px;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+input {
+  @apply py-2 px-5 bg-purple-200
 }
 </style>
