@@ -1,6 +1,6 @@
 <template>
   <button
-      class="btn mx-4 text-center  hover:outline hover:ring-2 "
+      class="btn mx-4 text-center hover:outline hover:ring-2"
       :class="'bg-'+color+'-200 hover:shadow-'+color+'-900 ring-'+color+'-400'"
   >
     <slot></slot>
