@@ -1,7 +1,15 @@
 <template>
-  <div class="post">
-    <div><span class="font-bold">Название: </span>{{ post.title }}</div>
-    <div><span class="font-bold">Описание: </span>{{ post.body }}</div>
+  <div class="post flex justify-between">
+    <div class="">
+      <div><span class="font-bold">Название: </span>{{ post.title }}</div>
+      <div><span class="font-bold">Описание: </span>{{ post.body }}</div>
+    </div>
+    <i-button
+        color="red"
+        @click="$emit('remove', post)"
+    >
+      Удалить
+    </i-button>
   </div>
 </template>
 
