@@ -1,8 +1,8 @@
 <template>
   <input
       :value="modelValue" @input="updateInput"
-      class="py-2 px-5" style="outline-color:mediumpurple"
-      :class="'bg-'+color+'-200'"
+      class="py-2 px-5 placeholder-gray-500 border" style="outline-color:mediumpurple"
+      :class="'bg-'+color+'-200 border-'+color+'-500'"
   >
 </template>
 

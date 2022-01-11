@@ -1,6 +1,7 @@
 <template>
   <div class="post flex justify-between">
-    <div class="">
+    <div>
+      <div><span class="font-bold">id: </span>{{ post.id }}</div>
       <div><span class="font-bold">Название: </span>{{ post.title }}</div>
       <div><span class="font-bold">Описание: </span>{{ post.body }}</div>
     </div>
