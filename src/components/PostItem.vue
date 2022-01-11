@@ -5,12 +5,20 @@
       <div><span class="font-bold">Название: </span>{{ post.title }}</div>
       <div><span class="font-bold">Описание: </span>{{ post.body }}</div>
     </div>
-    <i-button
-        color="red"
-        @click="$emit('remove', post)"
-    >
-      Удалить
-    </i-button>
+    <div>
+      <i-button
+          color="green"
+          @click="$router.push(`/posts/${post.id}`)"
+      >
+        Просмотр
+      </i-button>
+      <i-button
+          color="red"
+          @click="$emit('remove', post)"
+      >
+        Удалить
+      </i-button>
+    </div>
   </div>
 </template>
 
