@@ -4,6 +4,7 @@
     <div class="flex mx-4">
       <router-link to="/posts" class="mx-4">Posts</router-link>
       <router-link to="/about" class="mx-4">About</router-link>
+      <router-link to="/store" class="mx-4">Store</router-link>
     </div>
   </div>
 </template>
